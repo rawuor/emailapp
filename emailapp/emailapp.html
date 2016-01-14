@@ -11,18 +11,28 @@
          <h1>{{title}}</h1>
          <input type="text" ng-model="title" placeholder="Write a title here">
      </div>
- 
-     <script src= "https://code.angularjs.org/1.5.0-rc.0/angular.min.js"></script>
+     <!--Vendor libraries-->
+	  <script src= "https://code.angularjs.org/1.5.0-rc.0/angular.min.js"></script>
       <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!--Extra routing library-->
 	  <script src = "https://code.angularjs.org/1.5.0-rc.0/angular-route.js"></script>
-      <script>
+      <!--Application files-->
+	  <script src = "js/app.js"></script>
+	  <script src = "js/controllers/inbox.js"></script>
+	  <!--
+	  <script>
       var myApp = angular.module('myApp',['ngRoute']);
 
       myApp.controller('TestCtrl', ['$scope', function($scope) {
          //$scope.title = "Sample title: This is my name";
 		 $scope.title;
        }]);
-      </script>
+	   app.config(function ($routeProvider){
+			$routeProvider.when('/inbox', {
+				templateUrl : 'views/inbox.html',
+				controller:'InboxCtrl',
+				controllerAs: 'inbox'
+			})
+		};
+      </script>-->
     </body>
   </html>
