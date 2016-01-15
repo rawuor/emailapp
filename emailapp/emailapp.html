@@ -4,14 +4,15 @@
     <head>
       <meta charset="utf-8">
       <title>AngularJS Email App</title>
-    <!-- <link href="css/style.css" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
    </head>
    <body>
-   <div ng-view></div>
-     <div ng-controller="TestCtrl">
-         <h1>{{title}}</h1>
-         <input type="text" ng-model="title" placeholder="Write a title here">
-     </div>
+   <main class = "main" role = "main">
+	<div class = "wrapper">
+		<div ng-view></div>	
+	</div>
+   </main>
+   
      <!--Vendor libraries-->
 	  <script src= "https://code.angularjs.org/1.5.0-rc.0/angular.min.js"></script>
       <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
